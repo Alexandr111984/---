@@ -5,11 +5,9 @@ public class Main {
         Calculator calc = Calculator.instance.get();
         int a = calc.plus.apply(1, 2);
         int b = calc.minus.apply(1, 1);
-        try {
-            int c = calc.devide.apply(a, b);//Ошибка при делении на ноль.
-        } catch (ArithmeticException e) {
-            System.out.println("На ноль делить нельзя");
-        }
+        int c = calc.devide.apply(a, b);// на ноль делить нельзя
+
+        calc.println.accept(c);
     }
 
 }
